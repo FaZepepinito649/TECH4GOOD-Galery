@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech4Good — Galería Digital de Proyectos · Campus SLP</title>
+  <meta name="description" content="Galería digital de proyectos Tech4Good, Campus San Luis Potosí. Ideas que se convierten en soluciones." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__noise"></div>
+    <nav class="hero__topbar">
+      <span class="topbar__campus">PrepaTec · Campus San Luis Potosí</span>
+      <span class="topbar__year">2025 – 2026</span>
+    </nav>
+    <div class="hero__content">
+      <div class="hero__label">Galería Digital de Proyectos</div>
+      <h1 class="hero__title">
+        <span class="title__tech">TECH</span><span class="title__4">4</span><span class="title__good">GOOD</span>
+      </h1>
+      <p class="hero__sub">Donde las ideas se convierten en soluciones.</p>
+      <div class="hero__stats">
+        <div class="stat"><span class="stat__num">60+</span><span class="stat__label">Proyectos</span></div>
+        <div class="stat__divider"></div>
+        <div class="stat"><span class="stat__num">5</span><span class="stat__label">Categorías</span></div>
+        <div class="stat__divider"></div>
+        <div class="stat"><span class="stat__num">200+</span><span class="stat__label">Estudiantes</span></div>
+      </div>
+    </div>
+    <div class="hero__scroll-cta">
+      <span>Explorar proyectos</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- CATEGORY NAV -->
+  <nav class="cat-nav" id="cat-nav">
+    <button class="cat-btn active" data-filter="all">Todos</button>
+    <button class="cat-btn" data-filter="comunidad" data-color="comunidad">
+      <span class="cat-dot"></span> Comunidad
+    </button>
+    <button class="cat-btn" data-filter="educacion" data-color="educacion">
+      <span class="cat-dot"></span> Educación
+    </button>
+    <button class="cat-btn" data-filter="medioambiente" data-color="medioambiente">
+      <span class="cat-dot"></span> Medio Ambiente
+    </button>
+    <button class="cat-btn" data-filter="salud" data-color="salud">
+      <span class="cat-dot"></span> Salud
+    </button>
+    <button class="cat-btn" data-filter="inclusion" data-color="inclusion">
+      <span class="cat-dot"></span> Inclusión
+    </button>
+    <button class="cat-btn" data-filter="bloopers" data-color="bloopers">
+      <span class="cat-dot"></span> Bloopers
+    </button>
+  </nav>
+
+  <!-- MAIN GALLERY -->
+  <main class="gallery" id="gallery">
+
+    <!-- ═══════════════ COMUNIDAD ═══════════════ -->
+    <section class="cat-section" id="comunidad" data-category="comunidad">
+      <div class="cat-section__header">
+        <div class="cat-section__tag">Categoría 01</div>
+        <h2 class="cat-section__title">Comunidad</h2>
+        <p class="cat-section__desc">Proyectos que fortalecen la convivencia, la seguridad y la movilidad en nuestro entorno.</p>
+      </div>
+      <div class="projects-grid" id="grid-comunidad"></div>
+    </section>
+
+    <!-- ═══════════════ EDUCACIÓN ═══════════════ -->
+    <section class="cat-section" id="educacion" data-category="educacion">
+      <div class="cat-section__header">
+        <div class="cat-section__tag">Categoría 02</div>
+        <h2 class="cat-section__title">Educación</h2>
+        <p class="cat-section__desc">Herramientas digitales que democratizan el aprendizaje y amplían oportunidades.</p>
+      </div>
+      <div class="projects-grid" id="grid-educacion"></div>
+    </section>
+
+    <!-- ═══════════════ MEDIO AMBIENTE ═══════════════ -->
+    <section class="cat-section" id="medioambiente" data-category="medioambiente">
+      <div class="cat-section__header">
+        <div class="cat-section__tag">Categoría 03</div>
+        <h2 class="cat-section__title">Medio Ambiente</h2>
+        <p class="cat-section__desc">Soluciones tecnológicas para cuidar nuestro planeta y hacer ciudades más limpias.</p>
+      </div>
+      <div class="projects-grid" id="grid-medioambiente"></div>
+    </section>
+
+    <!-- ═══════════════ SALUD ═══════════════ -->
+    <section class="cat-section" id="salud" data-category="salud">
+      <div class="cat-section__header">
+        <div class="cat-section__tag">Categoría 04</div>
+        <h2 class="cat-section__title">Salud</h2>
+        <p class="cat-section__desc">Apps y sistemas que mejoran el acceso a medicamentos y servicios de salud.</p>
+      </div>
+      <div class="projects-grid" id="grid-salud"></div>
+    </section>
+
+    <!-- ═══════════════ INCLUSIÓN ═══════════════ -->
+    <section class="cat-section" id="inclusion" data-category="inclusion">
+      <div class="cat-section__header">
+        <div class="cat-section__tag">Categoría 05</div>
+        <h2 class="cat-section__title">Inclusión</h2>
+        <p class="cat-section__desc">Tecnología que derriba barreras y construye espacios para todos.</p>
+      </div>
+      <div class="projects-grid" id="grid-inclusion"></div>
+    </section>
+
+    <!-- ═══════════════ BLOOPERS ═══════════════ -->
+    <section class="cat-section" id="bloopers" data-category="bloopers">
+      <div class="cat-section__header">
+        <div class="cat-section__tag">Bonus</div>
+        <h2 class="cat-section__title">Bloopers</h2>
+        <p class="cat-section__desc">Los mejores momentos detrás de cámaras. Porque el proceso también vale la pena.</p>
+      </div>
+      <div class="projects-grid" id="grid-bloopers">
+        <div class="bloopers-placeholder">
+          <div class="bloopers-icon">🎬</div>
+          <p>Próximamente — contenido detrás de cámaras</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal__close" id="modal-close" aria-label="Cerrar">✕</button>
+      <div class="modal__inner">
+        <div class="modal__header">
+          <div class="modal__cat-badge" id="modal-cat-badge"></div>
+          <h2 class="modal__title" id="modal-title"></h2>
+          <div class="modal__type-tag" id="modal-type-tag"></div>
+        </div>
+        <div class="modal__body">
+          <div class="modal__gallery" id="modal-gallery">
+            <div class="gallery-placeholder" id="gallery-placeholder">
+              <div class="gallery-placeholder__icon">📷</div>
+              <p>Galería de imágenes — próximamente</p>
+              <span class="gallery-placeholder__hint">Las fotos aparecerán aquí cuando se agreguen al proyecto</span>
+            </div>
+            <div class="gallery-slides" id="gallery-slides" style="display:none;"></div>
+          </div>
+          <div class="modal__info">
+            <div class="modal__description" id="modal-description"></div>
+            <div class="modal__team">
+              <h4 class="modal__team-title">Equipo</h4>
+              <ul class="modal__team-list" id="modal-team-list"></ul>
+            </div>
+            <div class="modal__actions" id="modal-actions"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEB PREVIEW MODAL (iframe) -->
+  <div class="web-modal-overlay" id="web-modal-overlay">
+    <div class="web-modal">
+      <div class="web-modal__bar">
+        <div class="web-modal__dots">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="web-modal__url" id="web-modal-url"></div>
+        <button class="web-modal__close" id="web-modal-close">✕</button>
+      </div>
+      <div class="web-modal__content">
+        <iframe id="web-modal-iframe" src="" title="Vista previa del sitio web" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+        <div class="web-modal__fallback" id="web-modal-fallback" style="display:none;">
+          <div class="fallback__icon">🌐</div>
+          <p>Este sitio no permite vista previa embebida.</p>
+          <a id="web-modal-ext-link" href="#" target="_blank" rel="noopener" class="btn btn--primary">Abrir en nueva pestaña ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">TECH<span>4</span>GOOD</span>
+        <p>Campus San Luis Potosí</p>
+      </div>
+      <div class="footer__copy">
+        <p>© 2026 Tech4Good · PrepaTec SLP</p>
+        <p class="footer__made">Galería Digital de Proyectos</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
