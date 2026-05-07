@@ -342,8 +342,8 @@ body {
    ════════════════════════════════════ */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
 }
 
 .project-card {
@@ -352,13 +352,11 @@ body {
   --cat-light: #1a1a1a;
   background: var(--cat-bg);
   border: 1px solid rgba(255,255,255,0.06);
-  border-top: 3px solid var(--cat-accent);
   border-radius: var(--radius);
+  padding: 1.75rem;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
   transform: translateY(20px);
@@ -368,150 +366,81 @@ body {
   animation: cardIn 0.5s ease forwards;
 }
 
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--cat-accent) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 24px 48px rgba(0,0,0,0.5), 0 0 0 1px var(--cat-accent);
+  border-color: var(--cat-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px var(--cat-accent) inset;
 }
+.project-card:hover::before { opacity: 0.05; }
 
-/* ── Card Hero Image ── */
-.card__hero {
-  position: relative;
-  width: 100%;
-  height: 260px;
-  overflow: hidden;
-  background: var(--cat-light);
-  flex-shrink: 0;
-}
-
-.card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-.project-card:hover .card__img { transform: scale(1.05); }
-
-.card__img-placeholder {
-  width: 100%;
-  height: 100%;
+.card__top {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  opacity: 0.4;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
 }
 
-/* Category color tint over image */
-.card__img-tint {
-  position: absolute;
-  inset: 0;
-  background: var(--cat-accent);
-  opacity: 0.15;
-  mix-blend-mode: color;
-  pointer-events: none;
-}
-
-/* Gradient fade at bottom of image into card body */
-.card__img-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 45%, var(--cat-bg) 100%);
-  pointer-events: none;
-}
-
-/* Tags on image */
-.card__img-tags {
-  position: absolute;
-  bottom: 0.85rem;
-  left: 0.85rem;
-  right: 0.85rem;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
+.card__emoji {
+  font-size: 2rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
 }
 
 .card__type-tag {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
-  background: rgba(0,0,0,0.55);
-  color: var(--text-secondary);
-  border: 1px solid rgba(255,255,255,0.12);
-  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.06);
+  color: var(--text-muted);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .card__type-tag--web {
-  background: rgba(120,190,210,0.25);
+  background: rgba(120,190,210,0.12);
   color: #7ab8c4;
-  border-color: rgba(120,190,210,0.4);
-}
-
-.card__web-pill {
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.06em;
-  padding: 0.3rem 0.65rem;
-  border-radius: 999px;
-  background: rgba(120,190,210,0.2);
-  color: #7ab8c4;
-  border: 1px solid rgba(120,190,210,0.35);
-  backdrop-filter: blur(6px);
-}
-
-/* ── Card Body ── */
-.card__body {
-  padding: 1.25rem 1.5rem 1.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  background: var(--cat-bg);
-}
-
-.card__body-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.75rem;
-}
-
-.card__emoji {
-  font-size: 1.5rem;
-  line-height: 1;
-}
-
-.card__team-count {
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  color: var(--cat-accent);
-  letter-spacing: 0.05em;
-  opacity: 0.8;
+  border-color: rgba(120,190,210,0.25);
 }
 
 .card__name {
   font-family: var(--font-body);
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
   line-height: 1.3;
 }
 
 .card__desc {
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   color: var(--text-secondary);
   line-height: 1.6;
-  flex: 1;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .card__footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   margin-top: auto;
+}
+
+.card__team-count {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
 }
 
 .card__cta {
@@ -520,8 +449,8 @@ body {
   color: var(--cat-accent);
   font-family: var(--font-body);
   font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
   border-radius: 999px;
   cursor: pointer;
   transition: background var(--transition), color var(--transition);
@@ -531,26 +460,108 @@ body {
   color: #000;
 }
 
-/* ════════════════════════════════════
-   BLOOPERS
-   ════════════════════════════════════ */
-
-.bloopers-placeholder {
-  grid-column: 1 / -1;
+.card__web-bar {
+  margin-top: 1rem;
+  padding: 0.6rem 0.85rem;
+  background: rgba(120,190,210,0.08);
+  border: 1px solid rgba(120,190,210,0.2);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  color: #7ab8c4;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 5rem 2rem;
-  border: 2px dashed rgba(212,148,74,0.3);
-  border-radius: var(--radius);
-  text-align: center;
-  gap: 1rem;
-  color: var(--text-muted);
+  gap: 0.5rem;
 }
 
-.bloopers-icon { font-size: 3rem; }
-.bloopers-placeholder p { font-size: 1rem; }
+/* ════════════════════════════════════
+   BLOOPERS GALLERY
+   ════════════════════════════════════ */
+.bloopers-gallery {
+  position: relative;
+  padding: 1rem 0;
+}
+
+/* Film tape strips */
+.bloopers-tape {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 2rem;
+  background: #1a1109;
+  border-top: 3px solid #d4944a;
+  border-bottom: 3px solid #d4944a;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.1rem;
+  opacity: 0.7;
+  animation: tapeScroll 12s linear infinite;
+}
+.bloopers-tape--bottom {
+  animation-direction: reverse;
+  margin-top: 3rem;
+}
+
+@keyframes tapeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Masonry-ish grid */
+.bloopers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2.5rem 2rem;
+  padding: 3rem 0;
+  align-items: start;
+}
+
+/* Polaroid cards */
+.blooper-card {
+  background: #fff;
+  padding: 0.75rem 0.75rem 3rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.3);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease;
+}
+
+.blooper-card--tilt-left  { transform: rotate(-2.5deg); }
+.blooper-card--tilt-right { transform: rotate(2deg); }
+
+.blooper-card:hover {
+  transform: rotate(0deg) scale(1.06) translateY(-8px) !important;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 4px 12px rgba(212,148,74,0.3);
+  z-index: 10;
+}
+
+.blooper-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  background: #111;
+}
+
+.blooper-caption {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: #333;
+  padding-top: 0.75rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Pin dot on each card */
+.blooper-card::before {
+  content: '📌';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
 
 /* ════════════════════════════════════
    PROJECT MODAL
@@ -977,10 +988,7 @@ body {
 
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
   }
-
-  .card__hero { height: 200px; }
 
   .modal__body {
     grid-template-columns: 1fr;

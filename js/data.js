@@ -14,7 +14,7 @@ const PROJECTS = [
     type: "app",
     description: "Una comunidad en línea a nivel local que conecta tiendas de segunda mano, revendedores individuales y compradores. Su enfoque es la reventa de ropa para evitar apoyar sitios de moda rápida.",
     team: ["Celina Rangel", "Andrea López", "Leonardo Ortiz", "Valeria Gutiérrez", "Renata Robles"],
-    images: ["assets/ecocloset/ecocloset-1.jpg", "assets/ecocloset/ecocloset-2.jpg"],
+    images: ["assets/ecocloset/ecocloset-1.jpg", "assets/ecocloset/ecocloset-2.jpg", "assets/ecocloset/ecocloset-3.jpg"],
     webUrl: null,
     emoji: "👗"
   },
@@ -25,7 +25,7 @@ const PROJECTS = [
     type: "app",
     description: "Busca reducir tiempos muertos, racionalizar el espacio entre transportes y resolver el problema de la falta de transporte público en la ciudad.",
     team: ["Luis Ángel Ortega", "Maximiliano Muñoz", "Josué Sandoval", "Diego Jahuey", "Omar Cisneros"],
-    images: ["assets/busstop/busstop-1.jpg", "assets/busstop/busstop-2.jpg"],
+    images: ["assets/busstop/busstop-1.jpg", "assets/busstop/busstop-2.jpg", "assets/busstop/busstop-3.jpg"],
     webUrl: null,
     emoji: "🚌"
   },
@@ -36,7 +36,7 @@ const PROJECTS = [
     type: "app",
     description: "Una app que detecta movimiento a través de cámaras de vigilancia y genera un sonido de ladrido de perro, ahuyentando así a cualquier intruso.",
     team: ["Katia Rangel", "Inés Balbotin", "Sofía Palomares", "Ana Sofía Lira"],
-    images: ["assets/barkcam/barkcam-1.jpg", "assets/barkcam/barkcam-2.jpg"],
+    images: ["assets/barkcam/barkcam-1.jpg", "assets/barkcam/barkcam-2.jpg", "assets/barkcam/barkcam-3.jpg"],
     webUrl: null,
     emoji: "🐕"
   },
@@ -47,7 +47,7 @@ const PROJECTS = [
     type: "app",
     description: "La app ayuda a que los vecinos de la comunidad puedan reportar calles mal pavimentadas o baches, enviando fotos y ubicación para que el gobierno pueda identificarlos y actuar eficazmente.",
     team: ["Valentina Rizo", "Pablo González", "Marlene Castillo", "Bryan Aguilar"],
-    images: ["assets/mabs/mabs-1.jpg", "assets/mabs/mabs-2.jpg"],
+    images: ["assets/mabs/mabs-1.jpg", "assets/mabs/mabs-2.jpg", "assets/mabs/mabs-3.jpg"],
     webUrl: null,
     emoji: "🛣️"
   },
@@ -58,7 +58,7 @@ const PROJECTS = [
     type: "app",
     description: "En esta app se registran infracciones viales con fotos de placas, identifica al propietario, notifica la falta y la multa correspondiente.",
     team: ["Andrés Borges", "Matías Mendoza", "Diego Coronado", "Emilio Díaz de León", "Juan José Palacios"],
-    images: ["assets/safepilot/safepilot-1.jpg", "assets/safepilot/safepilot-2.jpg"],
+    images: ["assets/safepilot/safepilot-1.jpg", "assets/safepilot/safepilot-2.jpg", "assets/safepilot/safepilot-3.jpg"],
     webUrl: null,
     emoji: "🚦"
   },
@@ -69,7 +69,7 @@ const PROJECTS = [
     type: "app",
     description: "Una app que ayuda a mejorar la seguridad en los parques, permitiendo pedir ayuda rápido, reportar incidentes y ubicar mejor las zonas de riesgo.",
     team: ["Carlos de los Santos", "Isabel González", "Antonio Acebo", "Roberta González"],
-    images: ["assets/alertix/alertix-1.jpg", "assets/alertix/alertix-2.jpg"],
+    images: ["assets/alertix/alertix-1.jpg", "assets/alertix/alertix-2.jpg", "assets/alertix/alertix-3.jpg"],
     webUrl: null,
     emoji: "🌳"
   },
@@ -80,7 +80,7 @@ const PROJECTS = [
     type: "app",
     description: "Apoyo a la educación de niños, fomentando su aprendizaje con diversión como si fuera un juego, logrando subir niveles para un 'pase de batalla' que brindará recompensas dentro de sus clases.",
     team: ["Patricio Flores", "Santiago Castro", "Víctor López", "Max Torres"],
-    images: ["assets/focusquest/focusquest-1.jpg", "assets/focusquest/focusquest-2.jpg"],
+    images: ["assets/focusquest/focusquest-1.jpg", "assets/focusquest/focusquest-2.jpg", "assets/focusquest/focusquest-3.jpg"],
     webUrl: null,
     emoji: "🎮"
   },
@@ -91,7 +91,7 @@ const PROJECTS = [
     type: "app",
     description: "Previene situaciones donde los cambios de clima provocan apagones sin previo aviso y genera mayor seguridad en las calles. La app permite programar encendidos y apagados y cuenta con pronóstico del clima.",
     team: ["Arumi Palacios", "Dana Menchaca"],
-    images: ["assets/iluminacion/iluminacion-1.jpg", "assets/iluminacion/iluminacion-2.jpg"],
+    images: ["assets/iluminacion/iluminacion-1.jpg", "assets/iluminacion/iluminacion-2.jpg", "assets/iluminacion/iluminacion-3.jpg"],
     webUrl: null,
     emoji: "💡"
   },
@@ -102,7 +102,7 @@ const PROJECTS = [
     type: "app",
     description: "Fortalece el trabajo de la PPNNA mediante inteligencia artificial para detectar patrones de riesgo y prevenir la violación a los derechos. Prioriza el acompañamiento familiar y facilita el acceso a programas de bienestar.",
     team: ["Andrea Rosado", "Vicente Sánchez", "Liliana Llama", "Barbara Alejos", "Ximena Sánchez"],
-    images: ["assets/semaforos/semaforos-1.jpg", "assets/semaforos/semaforos-2.jpg"],
+    images: ["assets/semaforos/semaforos-1.jpg", "assets/semaforos/semaforos-2.jpg", "assets/semaforos/semaforos-3.jpg"],
     webUrl: null,
     emoji: "🚸"
   },
@@ -113,7 +113,7 @@ const PROJECTS = [
     type: "app",
     description: "La app soluciona los largos tiempos de espera en los semáforos mediante cámaras inteligentes con inteligencia artificial para optimizar el flujo vehicular.",
     team: ["Francisco Torres", "Gabriel de la Maza", "Joaquín González", "Marcelo Lozano", "Rodrigo Gómez"],
-    images: ["assets/smartflow/smartflow-1.jpg", "assets/smartflow/smartflow-2.jpg"],
+    images: ["assets/smartflow/smartflow-1.jpg", "assets/smartflow/smartflow-2.jpg", "assets/smartflow/smartflow-3.jpg"],
     webUrl: null,
     emoji: "🚗"
   },
@@ -124,7 +124,7 @@ const PROJECTS = [
     type: "app",
     description: "La app guía a los jóvenes hacia 'zonas seguras' validando su presencia física mediante sensores Bluetooth para evitar fiestas clandestinas.",
     team: ["Miguel Ortiz", "Luis Pablo Castañedo", "Emil Antonio", "Luis Zapata"],
-    images: ["assets/sobr/sobr-1.jpg", "assets/sobr/sobr-2.jpg"],
+    images: ["assets/sobr/sobr-1.jpg", "assets/sobr/sobr-2.jpg", "assets/sobr/sobr-3.jpg"],
     webUrl: null,
     emoji: "📍"
   },
@@ -135,7 +135,7 @@ const PROJECTS = [
     type: "app",
     description: "Una red que ayuda y motiva a la comunidad a progresar en materia de voluntariado para los migrantes. La app conecta con el usuario para garantizar su seguimiento en la ayuda a migrantes.",
     team: ["Ana Lucía Mier", "Joaquín Wong", "Alejandro Boehringer", "Ana Paula Flores", "Arturo Olvera"],
-    images: ["assets/inmigram/inmigram-1.jpg", "assets/inmigram/inmigram-2.jpg"],
+    images: ["assets/inmigram/inmigram-1.jpg", "assets/inmigram/inmigram-2.jpg", "assets/inmigram/inmigram-3.jpg"],
     webUrl: null,
     emoji: "🌎"
   },
@@ -146,7 +146,7 @@ const PROJECTS = [
     type: "app",
     description: "Protege a los usuarios contra amenazas digitales como fraudes, malware y robo de información. Proporciona información clara sobre riesgos en internet y permite detectar y prevenir ataques cibernéticos en tiempo real.",
     team: ["Santiago Archidona", "Victoria Martínez", "Mónica Mirabal", "Debra Osuna", "Emilio de Jesús Ramírez"],
-    images: ["assets/escudodigital/escudodigital-1.jpg", "assets/escudodigital/escudodigital-2.jpg"],
+    images: ["assets/escudodigital/escudodigital-1.jpg", "assets/escudodigital/escudodigital-2.jpg", "assets/escudodigital/escudodigital-3.jpg"],
     webUrl: null,
     emoji: "🛡️"
   },
@@ -157,7 +157,7 @@ const PROJECTS = [
     type: "app",
     description: "Enseña nuevas habilidades tecnológicas mediante cursos adaptados a las necesidades e intereses de cada usuario. Busca combatir el edadismo en el uso de la tecnología, ofreciendo aprendizajes duraderos y acompañamiento continuo.",
     team: ["Andrea Gasca", "Ana Sofía Ramírez"],
-    images: ["assets/technworking/technworking-1.jpg", "assets/technworking/technworking-2.jpg"],
+    images: ["assets/technworking/technworking-1.jpg", "assets/technworking/technworking-2.jpg", "assets/technworking/technworking-3.jpg"],
     webUrl: null,
     emoji: "💻"
   },
@@ -168,7 +168,7 @@ const PROJECTS = [
     type: "app",
     description: "Permite al usuario detectar y reportar emergencias de incendios de manera rápida y sencilla, facilitando la comunicación con los servicios de emergencia para una respuesta más eficiente.",
     team: ["Paloma González", "Carlos Jiménez", "Aquiles Anhuar", "José Ángel Leija"],
-    images: ["assets/safefire/safefire-1.jpg", "assets/safefire/safefire-2.jpg"],
+    images: ["assets/safefire/safefire-1.jpg", "assets/safefire/safefire-2.jpg", "assets/safefire/safefire-3.jpg"],
     webUrl: null,
     emoji: "🔥"
   },
@@ -179,7 +179,7 @@ const PROJECTS = [
     type: "hardware",
     description: "Sistema que utiliza el sensor de agua HydroSense para detectar el aumento del nivel del agua y emitir una alarma. Permite tomar precauciones a tiempo, como resguardar pertenencias o evacuar si es necesario.",
     team: ["Andrea Alonso", "Diego Castillo", "Adriana Molina", "María José García", "Andrea Vera"],
-    images: ["assets/hydrosense/hydrosense-1.jpg", "assets/hydrosense/hydrosense-2.jpg"],
+    images: ["assets/hydrosense/hydrosense-1.jpg", "assets/hydrosense/hydrosense-2.jpg", "assets/hydrosense/hydrosense-3.jpg"],
     webUrl: null,
     emoji: "💧"
   },
@@ -192,7 +192,7 @@ const PROJECTS = [
     type: "app",
     description: "Desarrollada con MIT App Inventor, conecta a niños con autismo con escuelas e instituciones especializadas. Permite encontrar opciones confiables, conocer información relevante sobre cada institución y acceder a recomendaciones de otros usuarios.",
     team: ["Javier Gallegos", "Andrea Ruiz", "Miguel Alvarado", "Edgar Escalera"],
-    images: ["assets/edutea/edutea-1.jpg", "assets/edutea/edutea-2.jpg"],
+    images: ["assets/edutea/edutea-1.jpg", "assets/edutea/edutea-2.jpg", "assets/edutea/edutea-3.jpg"],
     webUrl: null,
     emoji: "🌻"
   },
@@ -203,7 +203,7 @@ const PROJECTS = [
     type: "app",
     description: "Chat de apoyo emocional que permite a los usuarios buscar ayuda de manera anónima, especialmente si no se sienten cómodos hablando con alguien directamente. Diseñada para ser humanizada, priorizando la sensibilidad y la empatía.",
     team: ["Ivanna Gutiérrez", "Patricio Torres", "Fernando Tristán", "Jacqueline Castillo"],
-    images: ["assets/emotionalsupport/emotionalsupport-1.jpg", "assets/emotionalsupport/emotionalsupport-2.jpg"],
+    images: ["assets/emotionalsupport/emotionalsupport-1.jpg", "assets/emotionalsupport/emotionalsupport-2.jpg", "assets/emotionalsupport/emotionalsupport-3.jpg"],
     webUrl: null,
     emoji: "💬"
   },
@@ -214,7 +214,7 @@ const PROJECTS = [
     type: "app",
     description: "Fomenta el aprendizaje dinámico en niños mediante una plataforma digital que brinda apoyo personalizado, con el objetivo de mejorar su desempeño a través de herramientas interactivas.",
     team: ["Heidy Zubieta", "Nicole Mastache", "Xhaviery Viazcán"],
-    images: ["assets/3hnx/3hnx-1.jpg", "assets/3hnx/3hnx-2.jpg"],
+    images: ["assets/3hnx/3hnx-1.jpg", "assets/3hnx/3hnx-2.jpg", "assets/3hnx/3hnx-3.jpg"],
     webUrl: null,
     emoji: "📚"
   },
@@ -225,7 +225,7 @@ const PROJECTS = [
     type: "app",
     description: "Integra un motor de IA que personaliza el aprendizaje adaptando los contenidos según necesidades e intereses. Cuenta con dashboards para alumnos, maestros, padres y administradores, y una biblioteca basada en contenidos de la SEP accesible sin internet.",
     team: ["Nicolás Ruiz", "José María Segundo", "Sebastián Montoya", "Diego Michin", "Aldo Hinojosa"],
-    images: ["assets/edula/edula-1.jpg", "assets/edula/edula-2.jpg"],
+    images: ["assets/edula/edula-1.jpg", "assets/edula/edula-2.jpg", "assets/edula/edula-3.jpg"],
     webUrl: null,
     emoji: "🧠"
   },
@@ -236,7 +236,7 @@ const PROJECTS = [
     type: "app",
     description: "Ofrece información confiable, clara y accesible sobre educación sexual, con herramientas para la prevención de riesgos como infecciones de transmisión sexual y embarazos no planeados. Funciona como espacio seguro de conocimiento.",
     team: ["María Fernández", "Martina Diliz", "Hefziba Medina", "Fernanda de la Torre"],
-    images: ["assets/clariox/clariox-1.jpg", "assets/clariox/clariox-2.jpg"],
+    images: ["assets/clariox/clariox-1.jpg", "assets/clariox/clariox-2.jpg", "assets/clariox/clariox-3.jpg"],
     webUrl: null,
     emoji: "❤️"
   },
@@ -247,7 +247,7 @@ const PROJECTS = [
     type: "app",
     description: "Enfocada en el desarrollo de habilidades digitales esenciales. Ofrece contenido interactivo para el aprendizaje autónomo y cuenta con un sistema de acompañamiento académico a través de asesorías en línea.",
     team: ["Ximena Quistian", "Aida del Pozo", "Salvador Orozco", "Alonso Canales", "Niko Piñero", "Ivanna Escobedo"],
-    images: ["assets/bitaula/bitaula-1.jpg", "assets/bitaula/bitaula-2.jpg"],
+    images: ["assets/bitaula/bitaula-1.jpg", "assets/bitaula/bitaula-2.jpg", "assets/bitaula/bitaula-3.jpg"],
     webUrl: null,
     emoji: "⚡"
   },
@@ -258,7 +258,7 @@ const PROJECTS = [
     type: "app",
     description: "Diseñada para ayudarte a identificar tus intereses y habilidades. Explora diferentes áreas y capacidades que quizás no habías considerado, guiándote para tomar una decisión vocacional informada, segura y alineada contigo.",
     team: ["Paola Silos", "Renata Galván", "Ana Victoria Auces", "Carolina Guerrero", "Paula García"],
-    images: ["assets/tucamino/tucamino-1.jpg", "assets/tucamino/tucamino-2.jpg"],
+    images: ["assets/tucamino/tucamino-1.jpg", "assets/tucamino/tucamino-2.jpg", "assets/tucamino/tucamino-3.jpg"],
     webUrl: null,
     emoji: "🗺️"
   },
@@ -269,7 +269,7 @@ const PROJECTS = [
     type: "app",
     description: "Una app que aborda el elitismo y la segregación social estudiantil, permitiendo buscar información y eliminar la brecha social con personas de mayor estatus económico.",
     team: ["Genaro Orlando Hipólito Ramos", "Iván Sanders"],
-    images: ["assets/equalchances/equalchances-1.jpg", "assets/equalchances/equalchances-2.jpg"],
+    images: ["assets/equalchances/equalchances-1.jpg", "assets/equalchances/equalchances-2.jpg", "assets/equalchances/equalchances-3.jpg"],
     webUrl: null,
     emoji: "⚖️"
   },
@@ -282,7 +282,7 @@ const PROJECTS = [
     type: "hardware",
     description: "Sensor de humedad para medir la humedad de tus plantas con un semáforo de tres colores y una app con información sobre el cuidado específico de cada planta.",
     team: ["André Montes de Oca", "Jesús Ruiz", "Diego Compean", "José Compean", "Diego Rangel"],
-    images: ["assets/plantguard/plantguard-1.jpg", "assets/plantguard/plantguard-2.jpg"],
+    images: ["assets/plantguard/plantguard-1.jpg", "assets/plantguard/plantguard-2.jpg", "assets/plantguard/plantguard-3.jpg"],
     webUrl: null,
     emoji: "🌱"
   },
@@ -293,7 +293,7 @@ const PROJECTS = [
     type: "app",
     description: "Aplicación centrada en las áreas verdes de la ciudad para combatir la acumulación de basura. Seleccionas un parque y te dice dónde están los basureros más cercanos, con sección de concientización sobre reciclaje.",
     team: ["Emilia Muñoz", "Luna Cossío", "Jorge Sierra", "Axel Rivero"],
-    images: ["assets/caminosverdes/caminosverdes-1.jpg", "assets/caminosverdes/caminosverdes-2.jpg"],
+    images: ["assets/caminosverdes/caminosverdes-1.jpg", "assets/caminosverdes/caminosverdes-2.jpg", "assets/caminosverdes/caminosverdes-3.jpg"],
     webUrl: null,
     emoji: "🌿"
   },
@@ -304,7 +304,7 @@ const PROJECTS = [
     type: "app",
     description: "App para hacer el servicio de agua más accesible y arreglar fugas mediante reportes, para que toda la población pueda acceder a agua de manera equitativa.",
     team: ["Delta Orozco", "Valentina Vonder", "Oscar Velázquez", "Juan Castanedo", "Iker Negrete", "Ximena Vázquez"],
-    images: ["assets/alertaagua/alertaagua-1.jpg", "assets/alertaagua/alertaagua-2.jpg"],
+    images: ["assets/alertaagua/alertaagua-1.jpg", "assets/alertaagua/alertaagua-2.jpg", "assets/alertaagua/alertaagua-3.jpg"],
     webUrl: null,
     emoji: "🚰"
   },
@@ -315,7 +315,7 @@ const PROJECTS = [
     type: "app",
     description: "Una app con la cual puedes localizar los centros de reciclaje más cercanos a tu ubicación de manera sencilla.",
     team: ["Gonzalo Osuna", "Ushio Inoue", "Gonzalo Salinas", "Roberto Rodrigues"],
-    images: ["assets/trashway/trashway-1.jpg", "assets/trashway/trashway-2.jpg"],
+    images: ["assets/trashway/trashway-1.jpg", "assets/trashway/trashway-2.jpg", "assets/trashway/trashway-3.jpg"],
     webUrl: null,
     emoji: "♻️"
   },
@@ -326,7 +326,7 @@ const PROJECTS = [
     type: "app",
     description: "App para reportar la escasez de agua donde puedes hacer una solicitud para recibir servicios de suministro de agua en tu zona.",
     team: ["Rafael Méndez Ruiz", "José María Rivera", "Manuel Brandon Hernández"],
-    images: ["assets/escasezagua/escasezagua-1.jpg", "assets/escasezagua/escasezagua-2.jpg"],
+    images: ["assets/escasezagua/escasezagua-1.jpg", "assets/escasezagua/escasezagua-2.jpg", "assets/escasezagua/escasezagua-3.jpg"],
     webUrl: null,
     emoji: "💦"
   },
@@ -337,7 +337,7 @@ const PROJECTS = [
     type: "hardware",
     description: "Bote de basura que envía mensajes motivacionales cuando los dueños depositan las heces fecales de sus animales, incentivando buenas prácticas en espacios públicos.",
     team: ["Santiago Lozano", "Mauricio Lozano", "Paulina Acebo", "Marcelo Chávez"],
-    images: ["assets/motivapatas/motivapatas-1.jpg", "assets/motivapatas/motivapatas-2.jpg"],
+    images: ["assets/motivapatas/motivapatas-1.jpg", "assets/motivapatas/motivapatas-2.jpg", "assets/motivapatas/motivapatas-3.jpg"],
     webUrl: null,
     emoji: "🐾"
   },
@@ -627,7 +627,7 @@ const PROJECTS = [
     type: "app",
     description: "Aplicación para personas con discapacidad motriz donde pueden encontrar rutas accesibles adaptadas a sus necesidades de movilidad.",
     team: ["Regina Mercado", "Marina Rubin", "Manuela Zambrano", "María Pía Quibrera"],
-    images: ["assets/mysaferoutine/mysaferoutine-1.jpg", "assets/mysaferoutine/mysaferoutine-2.jpg"],
+    images: ["assets/mysaferoutine/mysaferoutine-1.jpg", "assets/mysaferoutine/mysaferoutine-2.jpg", "assets/mysaferoutine/mysaferoutine-3.jpg"],
     webUrl: null,
     emoji: "♿"
   },
@@ -638,7 +638,7 @@ const PROJECTS = [
     type: "hardware",
     description: "Bastón para personas ciegas que detecta movimiento y distancia y vibra para avisar con tiempo para que no haya choques, brindando mayor independencia.",
     team: ["Ximena Cacho", "Sebastián Capin", "Ricardo Vigna", "Cecilia Montante", "José Eduardo Esparza"],
-    images: ["assets/sensewalk/sensewalk-1.jpg", "assets/sensewalk/sensewalk-2.jpg"],
+    images: ["assets/sensewalk/sensewalk-1.jpg", "assets/sensewalk/sensewalk-2.jpg", "assets/sensewalk/sensewalk-3.jpg"],
     webUrl: null,
     emoji: "🦯"
   },
@@ -649,7 +649,7 @@ const PROJECTS = [
     type: "app",
     description: "Aplicación para las personas con daltonismo que las ayuda a detectar colores en su entorno, mejorando su experiencia visual diaria.",
     team: ["Koutarou Nakashima", "Corina Cruz", "Hermione Esparza", "Rebeca Silva"],
-    images: ["assets/eye360/eye360-1.jpg", "assets/eye360/eye360-2.jpg"],
+    images: ["assets/eye360/eye360-1.jpg", "assets/eye360/eye360-2.jpg", "assets/eye360/eye360-3.jpg"],
     webUrl: null,
     emoji: "👁️"
   },
@@ -660,7 +660,7 @@ const PROJECTS = [
     type: "app",
     description: "Facilita a los jóvenes participar activamente para las personas en situación de abandono (adultos mayores), mediante un sistema de recompensas y voluntariados.",
     team: ["Mariano Meier", "Alejandro García", "Ivette Montes de Oca", "Rodrigo Félix", "Manuel Sánchez"],
-    images: ["assets/activeempathy/activeempathy-1.jpg", "assets/activeempathy/activeempathy-2.jpg"],
+    images: ["assets/activeempathy/activeempathy-1.jpg", "assets/activeempathy/activeempathy-2.jpg", "assets/activeempathy/activeempathy-3.jpg"],
     webUrl: null,
     emoji: "🤝"
   },
@@ -671,7 +671,7 @@ const PROJECTS = [
     type: "app",
     description: "Facilita la comunicación entre personas con discapacidad auditiva y oyentes, creando un ambiente inclusivo que rompe las barreras de comunicación.",
     team: ["Ingrid Talavera", "Sofía Culebro", "Yuli Macías"],
-    images: ["assets/signconnect/signconnect-1.jpg", "assets/signconnect/signconnect-2.jpg"],
+    images: ["assets/signconnect/signconnect-1.jpg"],
     webUrl: null,
     emoji: "🤟"
   }
