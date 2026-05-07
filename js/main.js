@@ -50,19 +50,29 @@ function createCard(project) {
 
   const isWeb = project.type === "web";
   const typeLabel = TYPE_LABELS[project.type] || project.type;
+  const coverImg = project.images?.[0] ?? "";
 
   card.innerHTML = `
-    <div class="card__top">
-      <span class="card__emoji">${project.emoji}</span>
-      <div class="card__type-tag ${isWeb ? "card__type-tag--web" : ""}">${typeLabel}</div>
+    <div class="card__hero">
+      ${coverImg ? `<img src="${coverImg}" alt="${project.name}" loading="lazy" class="card__img">` : `<div class="card__img-placeholder">${project.emoji}</div>`}
+      <div class="card__img-overlay"></div>
+      <div class="card__img-tint"></div>
+      <div class="card__img-tags">
+        <div class="card__type-tag ${isWeb ? "card__type-tag--web" : ""}">${typeLabel}</div>
+        ${isWeb ? `<div class="card__web-pill">🌐 Web</div>` : ""}
+      </div>
     </div>
-    <h3 class="card__name">${project.name}</h3>
-    <p class="card__desc">${truncate(project.description, 110)}</p>
-    <div class="card__footer">
-      <div class="card__team-count">${project.team.length} integrante${project.team.length !== 1 ? "s" : ""}</div>
-      <button class="card__cta" data-id="${project.id}">Ver más →</button>
+    <div class="card__body">
+      <div class="card__body-top">
+        <span class="card__emoji">${project.emoji}</span>
+        <div class="card__team-count">${project.team.length} integrante${project.team.length !== 1 ? "s" : ""}</div>
+      </div>
+      <h3 class="card__name">${project.name}</h3>
+      <p class="card__desc">${truncate(project.description, 100)}</p>
+      <div class="card__footer">
+        <button class="card__cta" data-id="${project.id}">Ver más →</button>
+      </div>
     </div>
-    ${isWeb ? `<div class="card__web-bar"><span>🌐 Sitio web disponible</span></div>` : ""}
   `;
 
   card.querySelector(".card__cta").addEventListener("click", (e) => {
