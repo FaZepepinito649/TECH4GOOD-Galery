@@ -25,53 +25,60 @@ const webClose     = document.getElementById("web-modal-close");
 const iframe       = document.getElementById("web-modal-iframe");
 const catNav       = document.getElementById("cat-nav");
 
-// ─── Build all project cards ───
-function buildCards() {
+// ─── Build all project posters ───
+function buildPosters() {
   Object.keys(CAT_CONFIG).forEach(cat => {
     const grid = document.getElementById(`grid-${cat}`);
     if (!grid || cat === "bloopers") return;
 
     const catProjects = PROJECTS.filter(p => p.category === cat);
     catProjects.forEach(project => {
-      grid.appendChild(createCard(project));
+      grid.appendChild(createPoster(project));
     });
   });
 }
 
-function createCard(project) {
+function createPoster(project) {
   const cfg = CAT_CONFIG[project.category];
-  const card = document.createElement("article");
-  card.className = "project-card";
-  card.dataset.id = project.id;
-  card.dataset.category = project.category;
-  card.style.setProperty("--cat-accent", cfg.accent);
-  card.style.setProperty("--cat-bg", cfg.bg);
-  card.style.setProperty("--cat-light", cfg.light);
+  const poster = document.createElement("article");
+  poster.className = "project-poster";
+  poster.dataset.id = project.id;
+  poster.dataset.category = project.category;
+  poster.style.setProperty("--cat-accent", cfg.accent);
+  poster.style.setProperty("--cat-bg", cfg.bg);
+  poster.style.setProperty("--cat-light", cfg.light);
 
   const isWeb = project.type === "web";
   const typeLabel = TYPE_LABELS[project.type] || project.type;
+  const photos = (project.images || []).slice(0, 3);
 
-  card.innerHTML = `
-    <div class="card__top">
-      <span class="card__emoji">${project.emoji}</span>
-      <div class="card__type-tag ${isWeb ? "card__type-tag--web" : ""}">${typeLabel}</div>
+  const photosHTML = photos.map(src =>
+    `<div class="poster__photo"><img src="${src}" alt="${project.name}" loading="lazy"></div>`
+  ).join("");
+
+  const linkHTML = (isWeb && project.webUrl)
+    ? `<a href="${project.webUrl}" target="_blank" rel="noopener" class="poster__link">Ver sitio web →</a>`
+    : "";
+
+  poster.innerHTML = `
+    <div class="poster__header">
+      <h3 class="poster__title">${project.name}</h3>
+      <div class="poster__type-tag">${typeLabel}</div>
     </div>
-    <h3 class="card__name">${project.name}</h3>
-    <p class="card__desc">${truncate(project.description, 110)}</p>
-    <div class="card__footer">
-      <div class="card__team-count">${project.team.length} integrante${project.team.length !== 1 ? "s" : ""}</div>
-      <button class="card__cta" data-id="${project.id}">Ver más →</button>
+    <div class="poster__main">
+      <div class="poster__photos">${photosHTML}</div>
+      <div class="poster__info">
+        <p class="poster__desc">${project.description}</p>
+        <div class="poster__team">
+          <div class="poster__team-label">Equipo</div>
+          <div class="poster__team-names">${project.team.join(", ")}</div>
+        </div>
+        ${linkHTML}
+      </div>
     </div>
-    ${isWeb ? `<div class="card__web-bar"><span>🌐 Sitio web disponible</span></div>` : ""}
   `;
 
-  card.querySelector(".card__cta").addEventListener("click", (e) => {
-    e.stopPropagation();
-    openModal(project.id);
-  });
-  card.addEventListener("click", () => openModal(project.id));
-
-  return card;
+  return poster;
 }
 
 function truncate(str, n) {
@@ -123,7 +130,7 @@ function openModal(id) {
   if (project.type === "web" && project.webUrl) {
     const previewBtn = document.createElement("button");
     previewBtn.className = "btn btn--primary";
-    previewBtn.textContent = "🌐 Ver sitio web";
+    previewBtn.textContent = "Ver sitio web";
     previewBtn.addEventListener("click", () => openWebModal(project.webUrl, project.name));
     actions.appendChild(previewBtn);
 
@@ -243,19 +250,18 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// ─── Card entrance animations ───
-const cardObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
+// ─── Poster entrance animations ───
+const posterObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.style.animationDelay = `${(i % 6) * 60}ms`;
       entry.target.classList.add("visible");
-      cardObserver.unobserve(entry.target);
+      posterObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.05 });
 
 // ─── Init ───
-buildCards();
-document.querySelectorAll(".project-card").forEach(card => {
-  cardObserver.observe(card);
+buildPosters();
+document.querySelectorAll(".project-poster").forEach(poster => {
+  posterObserver.observe(poster);
 });
