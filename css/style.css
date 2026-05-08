@@ -70,16 +70,32 @@ body {
   opacity: 0.6;
 }
 
-/* Hero photo background (right side) */
-.hero__photo-bg {
+/* Hero photo panel — right half only, person centered inside */
+.hero__photo-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 52%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero__photo-panel::before {
+  content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../assets/hero-photo.jpg');
-  background-size: cover;
-  background-position: 55% top;
-  mask-image: linear-gradient(to left, black 20%, rgba(0,0,0,0.75) 42%, transparent 66%);
-  -webkit-mask-image: linear-gradient(to left, black 20%, rgba(0,0,0,0.75) 42%, transparent 66%);
-  pointer-events: none;
+  background: linear-gradient(to right, var(--brand-black) 0%, transparent 38%);
+  z-index: 1;
+}
+
+.hero__photo-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  opacity: 0.9;
 }
 
 /* Gradient glow */
