@@ -48,7 +48,6 @@ function createPoster(project) {
   poster.style.setProperty("--cat-bg", cfg.bg);
   poster.style.setProperty("--cat-light", cfg.light);
 
-  const isWeb = project.type === "web";
   const typeLabel = TYPE_LABELS[project.type] || project.type;
   const photos = (project.images || []).slice(0, 3);
 
@@ -56,7 +55,7 @@ function createPoster(project) {
     `<div class="poster__photo"><img src="${src}" alt="${project.name}" loading="lazy"></div>`
   ).join("");
 
-  const linkHTML = (isWeb && project.webUrl)
+  const linkHTML = (project.type === "web" && project.webUrl)
     ? `<a href="${project.webUrl}" target="_blank" rel="noopener" class="poster__link">Ver sitio web →</a>`
     : "";
 
@@ -65,13 +64,13 @@ function createPoster(project) {
       <h3 class="poster__title">${project.name}</h3>
       <div class="poster__type-tag">${typeLabel}</div>
     </div>
-    <div class="poster__main">
-      <div class="poster__photos">${photosHTML}</div>
-      <div class="poster__info">
-        <p class="poster__desc">${project.description}</p>
-        <div class="poster__team">
+    <div class="poster__photos">${photosHTML}</div>
+    <div class="poster__info">
+      <p class="poster__desc">${project.description}</p>
+      <div class="poster__meta">
+        <div>
           <div class="poster__team-label">Equipo</div>
-          <div class="poster__team-names">${project.team.join(", ")}</div>
+          <div class="poster__team-names">${project.team.join(" · ")}</div>
         </div>
         ${linkHTML}
       </div>
@@ -201,28 +200,50 @@ webOverlay.addEventListener("click", (e) => {
 });
 
 // ─── Category Filter ───
+function renderView(filter) {
+  const gallery = document.getElementById("gallery");
+  const prev = document.getElementById("filter-view");
+  if (prev) prev.remove();
+
+  if (filter === "all") {
+    document.querySelectorAll(".cat-section").forEach(sec => {
+      sec.style.display = "";
+    });
+    catNav.style.setProperty("--nav-accent", "#E8195A");
+    return;
+  }
+
+  document.querySelectorAll(".cat-section").forEach(sec => {
+    sec.style.display = "none";
+  });
+
+  if (filter === "bloopers") {
+    const sec = document.getElementById("bloopers");
+    if (sec) sec.style.display = "";
+    catNav.style.setProperty("--nav-accent", CAT_CONFIG.bloopers.accent);
+    return;
+  }
+
+  const cfg = CAT_CONFIG[filter];
+  if (cfg) catNav.style.setProperty("--nav-accent", cfg.accent);
+
+  const view = document.createElement("div");
+  view.id = "filter-view";
+
+  PROJECTS.filter(p => p.category === filter).forEach(project => {
+    const poster = createPoster(project);
+    view.appendChild(poster);
+    posterObserver.observe(poster);
+  });
+
+  gallery.prepend(view);
+}
+
 document.querySelectorAll(".cat-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
-
-    const filter = btn.dataset.filter;
-
-    document.querySelectorAll(".cat-section").forEach(sec => {
-      if (filter === "all" || sec.dataset.category === filter) {
-        sec.style.display = "";
-        sec.style.animation = "fadeInUp 0.4s ease forwards";
-      } else {
-        sec.style.display = "none";
-      }
-    });
-
-    if (filter !== "all") {
-      const target = document.getElementById(filter);
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
-      }
-    }
+    renderView(btn.dataset.filter);
   });
 });
 

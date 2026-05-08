@@ -275,7 +275,6 @@ body {
 .gallery { padding-bottom: 6rem; }
 
 .cat-section {
-  padding: 5rem 8vw 4rem;
   border-top: 1px solid var(--border);
 }
 
@@ -297,8 +296,7 @@ body {
 }
 
 .cat-section__header {
-  margin-bottom: 3rem;
-  max-width: 700px;
+  padding: 4rem 8vw 2.5rem;
 }
 
 .cat-section__tag {
@@ -343,40 +341,44 @@ body {
 .projects-grid {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+}
+
+#filter-view {
+  display: flex;
+  flex-direction: column;
 }
 
 .project-poster {
   --cat-accent: var(--brand-rose);
   --cat-bg: #111;
   --cat-light: #1a1a1a;
-  min-height: 50vh;
   display: flex;
   flex-direction: column;
-  border-top: 3px solid var(--cat-accent);
+  border-top: 4px solid var(--cat-accent);
   background: var(--cat-bg);
   overflow: hidden;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(24px);
 }
 
 .project-poster.visible {
-  animation: cardIn 0.6s ease forwards;
+  animation: cardIn 0.55s ease forwards;
 }
 
-/* ── Poster header: title + type tag ── */
+/* ── Title row ── */
 .poster__header {
-  padding: 1.5rem 2.5rem;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 1.5rem;
-  flex-shrink: 0;
+  padding: 1.25rem 4vw;
+  background: rgba(0,0,0,0.35);
   border-bottom: 1px solid rgba(255,255,255,0.05);
+  flex-shrink: 0;
 }
 
 .poster__title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 4vw, 5rem);
+  font-size: clamp(2.2rem, 4.5vw, 5.5rem);
   line-height: 1;
   color: var(--text-primary);
   letter-spacing: -0.02em;
@@ -386,9 +388,9 @@ body {
 .poster__type-tag {
   font-family: var(--font-mono);
   font-size: 0.6rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.35rem 0.85rem;
+  padding: 0.4rem 0.9rem;
   border-radius: 999px;
   background: rgba(255,255,255,0.06);
   color: var(--text-muted);
@@ -396,19 +398,14 @@ body {
   flex-shrink: 0;
 }
 
-/* ── Poster main: photos + info panel ── */
-.poster__main {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  min-height: 0;
-}
-
+/* ── 3-photo strip: full width ── */
 .poster__photos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  height: 44vh;
   gap: 2px;
   background: #000;
+  flex-shrink: 0;
 }
 
 .poster__photo {
@@ -420,64 +417,72 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 }
 
 .poster__photo:hover img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
-/* ── Info panel ── */
+/* ── Info bar: description + meta ── */
 .poster__info {
-  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2.5rem;
+  padding: 1.75rem 4vw;
   background: var(--cat-light);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  border-left: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(255,255,255,0.04);
 }
 
 .poster__desc {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  line-height: 1.75;
-  flex: 1;
+  line-height: 1.8;
+}
+
+.poster__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-shrink: 0;
 }
 
 .poster__team-label {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   color: var(--cat-accent);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .poster__team-names {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
+  text-align: right;
   line-height: 1.7;
 }
 
 .poster__link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1.4rem;
+  gap: 0.4rem;
+  padding: 0.6rem 1.4rem;
   background: var(--cat-accent);
   color: #000;
   border-radius: 999px;
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.82rem;
+  font-weight: 700;
   text-decoration: none;
-  transition: filter var(--transition), transform var(--transition);
-  align-self: flex-start;
+  white-space: nowrap;
+  transition: filter 0.2s ease, transform 0.2s ease;
 }
 
 .poster__link:hover {
   filter: brightness(1.15);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 /* ════════════════════════════════════
@@ -980,26 +985,18 @@ body {
   .hero__topbar { left: 6vw; right: 6vw; }
   .hero__stats { gap: 1.5rem; }
 
-  .cat-section { padding: 3.5rem 6vw 2.5rem; }
+  .cat-section__header { padding: 2.5rem 6vw 1.5rem; }
 
-  /* Posters stack vertically on mobile */
-  .poster__main {
-    grid-template-columns: 1fr;
-  }
-  .poster__photos {
-    grid-template-columns: repeat(3, 1fr);
-    height: 180px;
-  }
+  .poster__header { padding: 1rem 5vw; }
+  .poster__title { font-size: clamp(1.8rem, 8vw, 3rem); }
+  .poster__photos { height: 220px; }
   .poster__info {
-    border-left: none;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem 5vw;
   }
-  .poster__header {
-    padding: 1rem 1.25rem;
-  }
-  .poster__title {
-    font-size: clamp(1.8rem, 8vw, 3rem);
-  }
+  .poster__meta { align-items: flex-start; }
+  .poster__team-names { text-align: left; }
 
   .modal__body { grid-template-columns: 1fr; }
   .modal__inner { padding: 1.5rem; }
@@ -1013,5 +1010,5 @@ body {
   .hero__title { font-size: clamp(4.5rem, 22vw, 6rem); }
   .cat-section__title { font-size: clamp(2.5rem, 12vw, 4rem); }
   .stat__num { font-size: 2rem; }
-  .poster__photos { height: 140px; }
+  .poster__photos { height: 160px; }
 }
