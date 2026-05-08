@@ -76,9 +76,9 @@ body {
   inset: 0;
   background-image: url('../assets/hero-photo.jpg');
   background-size: cover;
-  background-position: center top;
-  mask-image: linear-gradient(to left, rgba(0,0,0,0.45) 0%, transparent 55%);
-  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.45) 0%, transparent 55%);
+  background-position: 55% top;
+  mask-image: linear-gradient(to left, black 20%, rgba(0,0,0,0.75) 42%, transparent 66%);
+  -webkit-mask-image: linear-gradient(to left, black 20%, rgba(0,0,0,0.75) 42%, transparent 66%);
   pointer-events: none;
 }
 
